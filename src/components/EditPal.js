@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-materialize';
-// import moment from 'moment';
 import FooterBlock from './FooterBlock';
 import PalForm from './PalForm';
 import { startEditPal } from '../actions/pals';

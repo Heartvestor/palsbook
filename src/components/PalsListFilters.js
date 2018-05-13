@@ -4,17 +4,6 @@ import { Input } from 'react-materialize';
 import { setTextFilter } from '../actions/filters';
 
 export class PalsListFilters extends React.Component {
-
-    // constructor (props) {
-    //     super(props);
-
-    //     this.state = {
-    //         text: ''
-    //     }
-    // }
-    // state = {
-    //     text: ''
-    // };
     
     onTextChange = (e) => {
       this.props.setTextFilter(e.target.value);

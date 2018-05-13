@@ -3,21 +3,15 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import storeConfig from './store/storeConfig';
 import AppRouter, { history } from './routers/AppRouter';
-// import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';
 import { startSetPals } from './actions/pals';
 import { login, logout } from './actions/auth';
 import { firebase } from './firebase/firebaseConfig';
-// import { setTextFilter } from './actions/filters';
-// import getVisiblePals from './selectors/pals';
 import './styles/base.css';
 import loader from "./images/loader.gif";
 
 
 const store = storeConfig();
-
-// const state = store.getState();
-// const visiblePals= getVisiblePals(state.pals, state.filters);
-// console.log(visiblePals);
 
 
 const App = (
@@ -36,7 +30,7 @@ const renderApp = () => {
 
 ReactDOM.render(<img className="loader" alt="loading" src={loader} />, document.getElementById('root'));
 
-// registerServiceWorker();
+registerServiceWorker();
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
