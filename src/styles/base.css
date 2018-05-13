@@ -1,0 +1,90 @@
+.loader {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 500px;
+   height: 500px;
+   margin-top: -250px; 
+   margin-left: -250px;
+}
+
+.customMargin {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.customMargin2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.customMarginLR {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.customPadding {
+    padding: 10px;
+}
+
+.titleFontStylePV {
+    font-weight:bold;
+}
+
+
+/* Nav */
+
+.is-active {
+    font-weight: bold;
+    color: #fff;
+    background-color: black;
+}
+
+nav .brand-logo {
+    color: black;
+}
+
+nav li a {
+    color:black;
+}
+
+.navpadding {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#nav-mobile {
+    background-color: yellow;
+}
+
+#nav-mobile a {
+    color: #000;
+    background-color: yellow;
+}
+
+#nav-mobile a:hover {
+    color: yellow;
+    background-color: black;
+}
+
+
+
+
+
+/* custom blockquote */
+
+blockquote {
+    border-left: 3px solid yellow;
+    font-style: italic;
+}
+
+
+/* footer */
+
+.footerMarginTop {
+    margin-top: 50px;
+}
+
+.footer-color {
+    color: black;
+}
