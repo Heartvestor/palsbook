@@ -6,7 +6,7 @@ import getVisiblePals from '../selectors/pals';
 export const PalsList = (props) => (
     <div className="center">
         <h4>{props.pals.length === 0 ? (<span>Hmm, no pals?</span>) : (<span>{props.pals.length} pal(s)</span>) } </h4>
-        <div className="row">
+        <div className="row center">
             {props.pals.map((pal) => {
                 return <PalsListItem key={pal.id} {...pal} />;
             })}

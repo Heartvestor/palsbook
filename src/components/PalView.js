@@ -28,8 +28,8 @@ export class PalView extends Component {
                     <Link to={`/paledit/${this.props.pal.id}`}><Button floating large className='green center customMargin2' waves='light' icon='edit' /></Link>                   
                     <Link to="/dashboard"><Button floating large className='yellow center customMargin2' waves='light' icon='view_comfy' /></Link>
                     
-                    <div className="row container center">     
-                        <div className="col m12 center z-depth-3 yellow lighten-4 customMargin customMarginLR customPadding">
+                    <div className="container center">     
+                        <div className="center z-depth-3 yellow lighten-4 customMargin customMarginLR customPadding">
                             <p>{this.props.pal.gender === 'Male' ? <img className="responsive-img" src={male} alt="male"/> : <img className="responsive-img" src={female} alt="female" />}</p>
                             <p><b>{`${this.props.pal.firstName} ${this.props.pal.lastName}`}</b></p>
                             <p>A.K.A. "<em><b>{this.props.pal.pseudo}</b></em>"</p>

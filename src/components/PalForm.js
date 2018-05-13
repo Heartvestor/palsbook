@@ -148,104 +148,106 @@ class PalForm extends Component {
     render () {
         return (
             <div className="container center">
-                {this.state.error && <p className="red lighten-2">{this.state.error}</p>}
-                <form onSubmit={this.onSubmit}>
-                    <Row>
-                        <Input m={6} 
-                            label="First Name"
-                            value={this.state.firstName}
-                            onChange={this.onFirstNameChange} 
-                        />
-                        <Input m={6} 
-                            label="Last Name"
-                            value={this.state.lastName}
-                            onChange={this.onLastNameChange} 
-                         />
-                        <Input m={12} 
-                            label="Pseudo/Alias"
-                            value={this.state.pseudo}
-                            onChange={this.onPseudoChange} 
-                         />
-                        <Input m={12} type='select' 
-                            label="Please make sure you click to choose a gender"
-                            value={this.state.gender}
-                            onChange={this.onGenderChange}
-                        >   
-                            <option value='Male'>Male</option>
-                            <option value='Female'>Female</option>
-                        </Input>
-                        <Input m={12} 
-                            label="Birthday"
-                            value={this.state.birthday}
-                            onChange={this.onBirthdayChange} 
-                        />
-                        <Input m={12} 
-                            type="text" 
-                            label="Known Since" 
-                            placeholder="Eg: 2010"
-                            value={this.state.knownSince}
-                            onChange={this.onKnownSinceChange} 
-                        />
-                        <Input m={12} 
-                            type='textarea' 
-                            label="What do you like about this pal?"
-                            value={this.state.likes}
-                            onChange={this.onLikesChange} 
-                        />
-                        <Input m={12} 
-                            type='textarea' 
-                            label="What do you dislike about this pal?"
-                            value={this.state.dislikes}
-                            onChange={this.onDislikesChange} 
-                        />
-                        <Input m={12} 
-                            type='textarea' 
-                            label="Describe your palship (friendship) with this pal?"
-                            value={this.state.description}
-                            onChange={this.onDescriptionChange}
-                         />
-                        <Input m={12} 
-                            type='textarea' 
-                            label="What value have you brought into this pal's life?"
-                            value={this.state.yourInput}
-                            onChange={this.onYourInputChange} 
-                        />
-                        <Input m={12} 
-                            type='textarea' 
-                            label="What value has this pal brought into your life?"
-                            value={this.state.palInput}
-                            onChange={this.onPalInputChange} 
-                        />
-                        <Input m={12} 
-                            type='textarea' 
-                            label="What vision do you have of your palship with this pal?"
-                            value={this.state.vision}
-                            onChange={this.onVisionChange} 
-                        />
-                        <Input m={12} hidden 
-                            value={this.state.pic}
-                            onChange={this.onPicChange}
-                        />
-                        <Input m={12} 
-                            type='textarea' 
-                            label="Other infos (address, Phone number, email, Social media...)"
-                            value={this.state.contacts}
-                            onChange={this.onContactsChange} 
-                        />
-                        <Input m={12} 
-                            type="text" 
-                            label="Give your palship a score from 1 to 10" 
-                            placeholder="Eg: 5"
-                            value={this.state.rating}
-                            onChange={this.onRatingChange} 
-                        />
-                        <Input m={12} hidden
-                            value={this.state.createdAt}
-                            onChange={this.onCreatedAtChange}
-                         />
-                        <Button waves='light' className="yellow darken-3 customMargin">Go <Icon right>arrow_forward</Icon></Button>
-                    </Row>
-                </form>
+                <div className="row center">
+                    {this.state.error && <p className="red lighten-2">{this.state.error}</p>}
+                    <form onSubmit={this.onSubmit} className="center m={12} s={12}" >
+                        <Row>
+                            <Input m={6} s={12}
+                                label="First Name"
+                                value={this.state.firstName}
+                                onChange={this.onFirstNameChange} 
+                            />
+                            <Input m={6} s={12}
+                                label="Last Name"
+                                value={this.state.lastName}
+                                onChange={this.onLastNameChange} 
+                            />
+                            <Input m={12} s={12}
+                                label="Pseudo/Alias"
+                                value={this.state.pseudo}
+                                onChange={this.onPseudoChange} 
+                            />
+                            <Input m={12} s={12} type='select' 
+                                label="Please make sure you click to choose a gender"
+                                value={this.state.gender}
+                                onChange={this.onGenderChange}
+                            >   
+                                <option value='Male'>Male</option>
+                                <option value='Female'>Female</option>
+                            </Input>
+                            <Input m={12} s={12}
+                                label="Birthday"
+                                value={this.state.birthday}
+                                onChange={this.onBirthdayChange} 
+                            />
+                            <Input m={12} s={12}
+                                type="text" 
+                                label="Known Since" 
+                                placeholder="Eg: 2010"
+                                value={this.state.knownSince}
+                                onChange={this.onKnownSinceChange} 
+                            />
+                            <Input m={12} s={12}
+                                type='textarea' 
+                                label="What do you like about this pal?"
+                                value={this.state.likes}
+                                onChange={this.onLikesChange} 
+                            />
+                            <Input m={12} s={12}
+                                type='textarea' 
+                                label="What do you dislike about this pal?"
+                                value={this.state.dislikes}
+                                onChange={this.onDislikesChange} 
+                            />
+                            <Input m={12} s={12}
+                                type='textarea' 
+                                label="Describe your palship (friendship) with this pal?"
+                                value={this.state.description}
+                                onChange={this.onDescriptionChange}
+                            />
+                            <Input m={12} 
+                                type='textarea' 
+                                label="What value have you brought into this pal's life?"
+                                value={this.state.yourInput}
+                                onChange={this.onYourInputChange} 
+                            />
+                            <Input m={12} s={12}
+                                type='textarea' 
+                                label="What value has this pal brought into your life?"
+                                value={this.state.palInput}
+                                onChange={this.onPalInputChange} 
+                            />
+                            <Input m={12} s={12}
+                                type='textarea' 
+                                label="What vision do you have of your palship with this pal?"
+                                value={this.state.vision}
+                                onChange={this.onVisionChange} 
+                            />
+                            <Input m={12} hidden s={12}
+                                value={this.state.pic}
+                                onChange={this.onPicChange}
+                            />
+                            <Input m={12} s={12}
+                                type='textarea' 
+                                label="Other infos (address, Phone number, email, Social media...)"
+                                value={this.state.contacts}
+                                onChange={this.onContactsChange} 
+                            />
+                            <Input m={12} s={12}
+                                type="text" 
+                                label="Give your palship a score from 1 to 10" 
+                                placeholder="Eg: 5"
+                                value={this.state.rating}
+                                onChange={this.onRatingChange} 
+                            />
+                            <Input m={12} s={12} hidden
+                                value={this.state.createdAt}
+                                onChange={this.onCreatedAtChange}
+                            />
+                            <Button waves='light' className="yellow darken-3 customMargin">Go <Icon right>arrow_forward</Icon></Button>
+                        </Row>
+                    </form>
+                </div>
             </div>
         );
     }

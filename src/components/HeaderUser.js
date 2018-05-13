@@ -6,7 +6,7 @@ import { startLogout } from '../actions/auth';
 import '../styles/base.css';
 import parallaxImg from '../images/banner.png';
 
-export const Header = ({ startLogout }) => (
+export const HeaderUser = ({ startLogout }) => (
     <div>
         <Navbar brand='PalsBook' 
             className='container-fluid yellow accent-4 navpadding black-text'
@@ -26,4 +26,4 @@ const mapDispatchToProps = (dispatch) => ({
     startLogout: () => dispatch (startLogout())
 });
 
-export default connect(undefined, mapDispatchToProps)(Header);
+export default connect(undefined, mapDispatchToProps)(HeaderUser);
