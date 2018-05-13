@@ -40,7 +40,6 @@ ReactDOM.render(<img className="loader" alt="loading" src={loader} />, document.
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    console.log('uid', user.uid);
     store.dispatch(login(user.uid));
     store.dispatch(startSetPals()).then(() => {
       renderApp();
@@ -53,6 +52,6 @@ firebase.auth().onAuthStateChanged((user) => {
     store.dispatch(logout());
     renderApp();
     history.push('/');
-    console.log('not logged in');
+    
   }
 });
