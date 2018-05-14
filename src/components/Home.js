@@ -13,15 +13,15 @@ const Home = () => (
         <div className="container center">
             <div className="row center">
                 <Login />
-                <div className="col m4 center customPadding">
+                <div className="col m4 s12 center customPadding">
                     <p><img src={num1} className="responsive-img" alt="num1" /></p>
                     <p className="amber lighten-5">Create your account by signing in with Gmail</p>
                 </div>
-                <div className="col m4 center customPadding">
+                <div className="col m4 s12 center customPadding">
                     <p><img src={num2} className="responsive-img" alt="num2" /></p>
                     <p className="amber lighten-5">Add and manage your pals list</p>
                 </div>
-                <div className="col m4 center customPadding">
+                <div className="col m4 s12 center customPadding">
                     <p><img src={num3} className="responsive-img" alt="num3" /></p>
                     <p className="amber lighten-5">Have some fun using PalsBook. Yup!</p>
                 </div>

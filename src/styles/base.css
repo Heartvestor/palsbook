@@ -106,7 +106,11 @@ nav li a {
 }
 
 
+/* Forms onchange activator for mobile browsers */
 
+.cursorP {
+    cursor: pointer;
+}
 
 
 /* custom blockquote */

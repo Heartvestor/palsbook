@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import moment from 'moment';
+import $ from 'jquery';
 import { Row, Input, Button, Icon } from 'react-materialize';
+import  '../styles/base.css';
 
 class PalForm extends Component {
     constructor (props) {
@@ -145,6 +148,10 @@ class PalForm extends Component {
 
     }
 
+    componentDidMount() {
+        $(ReactDOM.findDOMNode(this.refs.selectField)).on('change',this.onGenderChange);
+    }
+
     render () {
         return (
             <div className="container center">
@@ -153,21 +160,25 @@ class PalForm extends Component {
                     <form onSubmit={this.onSubmit} className="center m={12} s={12}" >
                         <Row>
                             <Input m={6} s={12}
+                                className="cursorP"
                                 label="First Name"
                                 value={this.state.firstName}
                                 onChange={this.onFirstNameChange} 
                             />
                             <Input m={6} s={12}
+                                className="cursorP"
                                 label="Last Name"
                                 value={this.state.lastName}
                                 onChange={this.onLastNameChange} 
                             />
                             <Input m={12} s={12}
+                                className="cursorP"
                                 label="Pseudo/Alias"
                                 value={this.state.pseudo}
                                 onChange={this.onPseudoChange} 
                             />
-                            <Input m={12} s={12} type='select' 
+                            <Input m={12} s={12} type='select' ref="selectField"
+                                className="cursorP"
                                 label="Please make sure you click to choose a gender"
                                 value={this.state.gender}
                                 onChange={this.onGenderChange}
@@ -176,11 +187,13 @@ class PalForm extends Component {
                                 <option value='Female'>Female</option>
                             </Input>
                             <Input m={12} s={12}
+                                className="cursorP"
                                 label="Birthday"
                                 value={this.state.birthday}
                                 onChange={this.onBirthdayChange} 
                             />
                             <Input m={12} s={12}
+                                className="cursorP"
                                 type="text" 
                                 label="Known Since" 
                                 placeholder="Eg: 2010"
@@ -188,52 +201,61 @@ class PalForm extends Component {
                                 onChange={this.onKnownSinceChange} 
                             />
                             <Input m={12} s={12}
+                                className="cursorP"
                                 type='textarea' 
                                 label="What do you like about this pal?"
                                 value={this.state.likes}
                                 onChange={this.onLikesChange} 
                             />
                             <Input m={12} s={12}
+                                className="cursorP"
                                 type='textarea' 
                                 label="What do you dislike about this pal?"
                                 value={this.state.dislikes}
                                 onChange={this.onDislikesChange} 
                             />
                             <Input m={12} s={12}
+                                className="cursorP"
                                 type='textarea' 
                                 label="Describe your palship (friendship) with this pal?"
                                 value={this.state.description}
                                 onChange={this.onDescriptionChange}
                             />
-                            <Input m={12} 
+                            <Input m={12}  s={12}
+                                className="cursorP"
                                 type='textarea' 
                                 label="What value have you brought into this pal's life?"
                                 value={this.state.yourInput}
                                 onChange={this.onYourInputChange} 
                             />
                             <Input m={12} s={12}
+                                className="cursorP"
                                 type='textarea' 
                                 label="What value has this pal brought into your life?"
                                 value={this.state.palInput}
                                 onChange={this.onPalInputChange} 
                             />
                             <Input m={12} s={12}
+                                className="cursorP"    
                                 type='textarea' 
                                 label="What vision do you have of your palship with this pal?"
                                 value={this.state.vision}
                                 onChange={this.onVisionChange} 
                             />
                             <Input m={12} hidden s={12}
+                                className="cursorP"
                                 value={this.state.pic}
                                 onChange={this.onPicChange}
                             />
                             <Input m={12} s={12}
+                                className="cursorP"
                                 type='textarea' 
                                 label="Other infos (address, Phone number, email, Social media...)"
                                 value={this.state.contacts}
                                 onChange={this.onContactsChange} 
                             />
                             <Input m={12} s={12}
+                                className="cursorP"
                                 type="text" 
                                 label="Give your palship a score from 1 to 10" 
                                 placeholder="Eg: 5"
@@ -241,6 +263,7 @@ class PalForm extends Component {
                                 onChange={this.onRatingChange} 
                             />
                             <Input m={12} s={12} hidden
+                                className="cursorP"
                                 value={this.state.createdAt}
                                 onChange={this.onCreatedAtChange}
                             />

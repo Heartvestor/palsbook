@@ -10,7 +10,7 @@ import '../styles/base.css';
 
 const PalsListItem = ({ id, firstName, lastName, pseudo, gender, createdAt }) => (
     <div>     
-        <div className="col m3 center z-depth-4 customMargin customMarginLR customPadding">
+        <div className="col m3 s12 center z-depth-4 grey lighten-5 customMargin customMarginLR customPadding">
             <p>{gender === 'Male' ? <img className="responsive-img" src={male} alt="male" /> : <img className="responsive-img" src={female} alt="female" />}</p>
             <p>{`${firstName} ${lastName}`}</p>
             <p className="yellow lighten-2">A.K.A. "<em><b>{pseudo}</b></em>"</p>
