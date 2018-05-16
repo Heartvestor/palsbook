@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import moment from 'moment';
-import $ from 'jquery';
 import { Row, Input, Button, Icon } from 'react-materialize';
 import  '../styles/base.css';
 
@@ -28,6 +26,7 @@ class PalForm extends Component {
             error: ''
 
         }
+    
     }
 
     onFirstNameChange = (e) => {
@@ -148,10 +147,6 @@ class PalForm extends Component {
 
     }
 
-    componentDidMount() {
-        $(ReactDOM.findDOMNode(this.refs.selectField)).on('change',this.onGenderChange);
-    }
-
     render () {
         return (
             <div className="container center">
@@ -177,8 +172,8 @@ class PalForm extends Component {
                                 value={this.state.pseudo}
                                 onChange={this.onPseudoChange} 
                             />
-                            <Input m={12} s={12} type='select' ref="selectField"
-                                className="cursorP"
+                            <Input m={6} s={12} type='select' ref="selectField"
+                                className="browser-default cursorP"
                                 label="Please make sure you click to choose a gender"
                                 value={this.state.gender}
                                 onChange={this.onGenderChange}
@@ -186,7 +181,7 @@ class PalForm extends Component {
                                 <option value='Male'>Male</option>
                                 <option value='Female'>Female</option>
                             </Input>
-                            <Input m={12} s={12}
+                            <Input m={6} s={12}
                                 className="cursorP"
                                 label="Birthday"
                                 value={this.state.birthday}

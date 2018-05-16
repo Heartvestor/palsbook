@@ -14,8 +14,8 @@ export const HeaderUser = ({ startLogout }) => (
             right
         >
             <li><NavLink to="/" activeClassName="is-active" exact={true}>Home</NavLink></li>
-            <li><NavLink to="/Dashboard" activeClassName="is-active">My Pals</NavLink></li>
-            <li><NavLink to="/About" activeClassName="is-active">About</NavLink></li>
+            <li><NavLink to="/dashboard" activeClassName="is-active">My Pals</NavLink></li>
+            <li><NavLink to="/about" activeClassName="is-active">About</NavLink></li>
             <li><Button className="red" onClick={startLogout}>Logout</Button></li>
         </Navbar>
         <Parallax imageSrc={parallaxImg} />
