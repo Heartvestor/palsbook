@@ -8,7 +8,11 @@ const About = () => (
         <div className="container center customMargin">
             <h3>About</h3>
             <blockquote className="z-depth-2 customPadding left-align light">
-                PalsBook is a project basically to explore React, Redux, Firebase and other utilities associated with React.<br />
+                PalsBook is a project basically to explore React, Redux, Firebase and other utilities associated with React.
+                Also, PalsBook is PWA (Progressive Web App) ready. Just access it via Chrome (ideally) or Firefox on your smartphone, enter browser menu
+                and down the menu list, you should find an 'Add to Home Screen' menu option. Choose it to add PalsBook to your
+                home menu. Then come out of Chrome, go to your home menu. You should find PalsBook icon there. Press the icon to launch PalsBook, and see for yourself... 
+                PWAs are a great technovelty!!!<br />
                 It's an app that allows people create an account easily, make a list of their pals, in a way that will probably 
                 make them rethink who really are their pals, make an inventory...<br />
                 It'll probably always be a work in progress, as I'll be adding more features gradually...<br /><br />

@@ -16,7 +16,7 @@ export const Header = ({ startLogout }) => (
             <li><NavLink to="/" activeClassName="is-active" exact={true}>Home</NavLink></li>
             <li><NavLink to="/about" activeClassName="is-active">About</NavLink></li>
         </Navbar>
-        <Parallax imageSrc={parallaxImg} />
+        <img className="responsive-img" imageSrc={parallaxImg} />
     </div>
 );
 
